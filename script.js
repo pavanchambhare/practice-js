@@ -57,23 +57,49 @@
 
 
 // polyfill for call
-let car1 = {
-  color: "red",
-  company: "farrari"
+// let car1 = {
+//   color: "red",
+//   company: "farrari"
+// };
+
+
+// function  purchaseCar(currency, price){
+//   console.log(
+//     `i have purchased ${this.color} - ${this.company}${price}`
+//   );
+// }
+
+// Function.prototype.myCall = function (context = {},  ...arge) {
+//   if(typeof this !== "fuction") {
+//     throw new Error(this + "It's not callable");
+
+//   }
+//   context.fn = this;
+//   context.fn(...arge);
+// };
+
+
+// const a = {};
+// const b = { key: "b"};
+// const c = {key: "c"};
+
+
+// a[b] = 123;
+// a[c]  = 456;
+
+// console.log(a[b]);
+
+// what's  JSON.strigify and JSON.parse
+
+const user = {
+  name: "Piyush",
+  age:24,
+
 };
 
+  const strObj =  JSON.stringify(user);
+  localStorage.setItem("test" , strObj)
+console.log(JSON.parse(strObj));
 
-function  purchaseCar(currency, price){
-  console.log(
-    `i have purchased ${this.color} - ${this.company}${price}`
-  );
-}
 
-Function.prototype.myCall = function (context = {},  ...arge) {
-  if(typeof this !== "fuction") {
-    throw new Error(this + "It's not callable");
-
-  }
-  context.fn = this;
-  context.fn(...arge);
-};
+ 
